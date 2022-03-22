@@ -22,6 +22,12 @@ import IconInput from './IconInput';
         options: ['small', 'large'],
       },
     },
+    width: {
+      control: {
+        type: 'select',
+        options: ['300', '150'],
+      },
+    },
     label: {
       control: {
         type: 'text',
@@ -30,7 +36,7 @@ import IconInput from './IconInput';
   }}
 />
 
-export const Template = (args) => <IconInput {...args} />;
+export const Template = args => <IconInput {...args} />;
 
 # IconInput
 

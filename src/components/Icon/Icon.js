@@ -7,6 +7,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Search, AtSign, ChevronDown } from 'react-feather';
+import { COLORS } from '../../constants';
 
 const icons = {
   search: Search,
@@ -14,7 +15,7 @@ const icons = {
   'chevron-down': ChevronDown,
 };
 
-const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
+const Icon = ({ id, size, color, strokeWidth = 1, ...delegated }) => {
   const Component = icons[id];
 
   if (!Component) {
@@ -29,7 +30,7 @@ const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
       }}
       {...delegated}
     >
-      <Component color="currentColor" size={size} />
+      <Component color={COLORS[color]} size={size} />
     </Wrapper>
   );
 };
